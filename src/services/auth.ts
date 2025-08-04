@@ -18,9 +18,7 @@ class AuthService {
   }
 
   generateAccessToken(payload: JwtPayload): string {
-    // return jwt.sign(payload, ACCESS_SECRET, { expiresIn: '15m' });
-    // return jwt.sign(payload, ACCESS_SECRET, { expiresIn: '7d' });
-    return jwt.sign(payload, ACCESS_SECRET, { expiresIn: '10s' });
+    return jwt.sign(payload, ACCESS_SECRET, { expiresIn: '5m' });
   }
 
   generateRefreshToken(payload: JwtPayload): string {

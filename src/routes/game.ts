@@ -92,28 +92,4 @@ router.get('/stats', async (req: AuthRequest, res: Response) => {
   }
 });
 
-// router.post('/reset', async (req: AuthRequest, res: Response) => {
-//   try {
-//     const userId = req.user!.userId;
-//     const { isComputerFirst } = req.body;
-    
-//     await gameService.endCurrentGameSession(userId);
-    
-//     const gameSession = await gameService.createGameSession(userId, isComputerFirst);
-    
-//     res.json({
-//       message: 'Game reset successfully',
-//       gameSession: {
-//         id: gameSession._id,
-//         board: gameSession.board,
-//         currentPlayer: gameSession.currentPlayer,
-//         gameState: gameSession.gameState,
-//         isComputerFirst: gameSession.isComputerFirst
-//       }
-//     });
-//   } catch (error: any) {
-//     res.status(500).json({ error: error.message });
-//   }
-// });
-
 export default router; 
